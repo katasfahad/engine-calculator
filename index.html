@@ -4,27 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="calculator.css">
-    <title>login form</title>
+    <title>engine calculator</title>
 </head>
 <body>
     <div class="box">
         <h2>engine displacement calculator</h2>
         <form >
             <div>
+                <!-- option for measurement units -->
                 <p>Measurement Units</p>
-                <select  id="option">
+                <select  id="option" >
                     <option value="cc">Cubic Centimeters (CC)</option>
                     <option value="ci">Cubic Inches (CI)</option>
                 </select>
             </div>
+            
+            <!-- The two inputs below are  for engine diameter and 
+            height respectively -->
+
             <div>
                 <input type="text" required id="bore">
-                <label>Piston/Bore (Milimeters)</label>
+                <label id="b">Piston/Bore (Milimeters)</label>
             </div>
             <div>
                 <input type="integer" required id="stroke">
-                <label>CrankShaft/Stroke size (Milimeters)</label>
+                <label id="s">CrankShaft/Stroke size (Milimeters)</label>
             </div>
+
+            <!-- option for number of Cylinders an engine has -->
             <div>
                 <p>Number Of Cylinders</p>
               <select id="number" id="number">
@@ -46,10 +53,11 @@
                   <option value="sixteen">16</option>
               </select>
             </div>
-            
+            <!-- button that calculates the formular -->
             <div>
                 <input type="button" value="calculate" id="calculate">
             </div>
+            <!-- This P outputs the result  -->
             <div class="result">
                 <p id="res"></p>
             </div>

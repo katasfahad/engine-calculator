@@ -1,16 +1,35 @@
 document.addEventListener('DOMContentLoaded', function() {
+
+    // This is the formular for calculating the 
+    // engine displacement in Cubic Centimeters CC 
+
+    //  CC = (bore * bore) * stroke * 0.7854 * No of CYLs / 1000
+
+    //  bore is engine cylinder diameter
+    //  stroke is engine cylinder height from top to bottom
+    //  0.7854 is the cylinder area but is a constant 
+    //  No of CYLs is number of cylinders
+
+// Creating and declaring a variable for the calculate button
 let calculate = document.querySelector('#calculate');
+
+// Adding an event listener to the calculate button
 calculate.addEventListener('click',
 function equate(){
+    // Creating and declaring some variables
+    // for input fields and option for number of cylinders
 let bore = parseInt(document.querySelector('#bore').value);
 let stroke = parseInt(document.querySelector('#stroke').value);
 let number = document.querySelector('#number').value;
 let calculate = document.querySelector('#calculate');
 let result = document.querySelector('#res');
 let equation;
-// equation =  ((bore * bore) * stroke  * 0.7854) / 1000
 
 
+
+// equation =  ((bore * bore) * stroke  * 0.7854 * number) / 1000
+
+// Creating if condition for option of number of cylinders
 switch (number) {
     case 'one':
         equation =  ((bore * bore) * stroke  * 0.7854  * 1) / 1000
@@ -66,6 +85,7 @@ switch (number) {
         break;
 }
 
+// Creating a statement to output the result in the DOM
 result.innerHTML = equation.toFixed(3) + " Cubic Centimeters (CC)"
 });
 });
