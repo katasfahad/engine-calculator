@@ -60,7 +60,7 @@ switch (number) {
         case 'sixteen':
         equation =  ((bore * bore) * stroke  * 0.7854 * 16) / 1000
         break;
-        
+    
     default:
         
         break;
