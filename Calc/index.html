@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="calculator.css">
+    <title>engine calculator</title>
+</head>
+<body>
+    <div class="box">
+        <h2>engine displacement calculator</h2>
+        <form >
+            <div>
+                <!-- option for measurement units -->
+                <p>Measurement Units</p>
+                <select  id="option" >
+                    <option value="cc">Cubic Centimeters (CC)</option>
+                    <option value="ci">Cubic Inches (CI)</option>
+                </select>
+            </div>
+            
+            <!-- The two inputs below are  for engine diameter and 
+            height respectively -->
+
+            <div>
+                <input type="text" required id="bore">
+                <label id="b">Piston/Bore (Milimeters)</label>
+            </div>
+            <div>
+                <input type="text" required id="stroke">
+                <label id="s">CrankShaft/Stroke size (Milimeters)</label>
+            </div>
+
+            <!-- option for number of Cylinders an engine has -->
+            <div>
+                <p>Number Of Cylinders</p>
+              <select id="number" id="number">
+                  <option value="one">1</option>
+                  <option value="two">2</option>
+                  <option value="three">3</option>
+                  <option value="four">4</option>
+                  <option value="five">5</option>
+                  <option value="six">6</option>
+                  <option value="seven">7</option>
+                  <option value="eight">8</option>
+                  <option value="nine">9</option>
+                  <option value="ten">10</option>
+                  <option value="eleven">11</option>
+                  <option value="twelve">12</option>
+                  <option value="thirteen">13</option>
+                  <option value="fourteen">14</option>
+                  <option value="fifteen">15</option>
+                  <option value="sixteen">16</option>
+              </select>
+            </div>
+            <!-- button that calculates the formular -->
+            <div>
+                <input type="button" value="calculate" id="calculate">
+            </div>
+            <!-- This P outputs the result  -->
+            <div class="result">
+                <p id="res"></p>
+            </div>
+        </form>
+    </div>
+    <script src="calculator.js"></script>
+</body>
+</html>
